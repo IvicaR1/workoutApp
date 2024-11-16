@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercises by Category</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    nav ul li a:hover {
+      color: darkred;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .card p {
+      font-size: 1rem;
+      padding: 0 1rem 1rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card a {
+      color: white;
+      text-decoration: none;
+      background-color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: background-color 0.2s;
+    }
+
+    .card a:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <div class="logo">WorkoutApp</div>
+    <nav>
+      <ul>
+        <li><a href="/bmicalculator">BMI Calculator</a></li>
+        <li><a href="/exercises">Exercises</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="cards-container">
+    <div th:each="exercise: ${exercises}" class="card">
+      <img th:src="@{'/' + ${exercise.imageUrl}}" alt="Image of exercise">
+      <h3 th:text="${exercise.name}"></h3>
+      <p th:text="${exercise.description}"></p>
+      <a th:href="${exercise.videoUrl}">Watch Video</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>

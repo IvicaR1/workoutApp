@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      padding: 1rem;
+    }
+
+    .tekst {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-left: 2rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: darkred;
+    }
+
+    main .tekst {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80vh;
+    }
+
+    .naslov {
+      width: 40%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .naslov h2 {
+      font-size: 3rem;
+      margin-top: 0;
+    }
+
+    .naslov p {
+      font-size: 1.2rem;
+    }
+
+    .kopce {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .kopce:hover {
+      background-color: darkred;
+    }
+
+    .slika {
+      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    .slika img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-container label {
+      font-weight: bold;
+    }
+
+    .form-container input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      padding: 1rem 2rem;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: darkred;
+    }
+
+    .result {
+      margin-top: 1rem;
+    }
+
+    .result h2, .result h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="tekst">
+    <h1>Workout App</h1>
+    <nav>
+      <ul>
+        <li><a href="/bmicalculator">BMI Calculator</a></li>
+        <li><a href="/exercises">Exercises</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="tekst">
+    <section class="naslov">
+      <h2>BMI Calculator</h2>
+      <div class="form-container">
+        <form action="/bmicalculator" method="post">
+          <label for="height">Height (in cm):</label>
+          <input type="number" id="height" name="height" required>
+          <br>
+          <label for="weight">Weight (in kg):</label>
+          <input type="number" id="weight" name="weight" required>
+          <br>
+          <br>
+          <button type="submit">Calculate BMI</button>
+        </form>
+
+        <div class="result">
+          <h2>Your BMI: <span th:text="${bmi}"></span></h2>
+          <h3>Your weight category is: <span th:text="${weightCategory}"></span></h3>
+        </div>
+      </div>
+    </section>
+    <div class="slika">
+      <img src="/bmi-ranges.jpg" alt="BMI Table">
+    </div>
+  </div>
+</main>
+</body>
+</html>

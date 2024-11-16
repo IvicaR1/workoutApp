@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: darkred;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .about-text {
+            flex: 1;
+            max-width: 600px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .about-text ul {
+            padding-left: 1rem;
+        }
+
+        .about-text li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <div class="logo">WorkoutApp</div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="about-container">
+        <div class="about-text">
+            <h3>About Us</h3>
+            <p>Welcome to my workout app!</p>
+            <p>This is my project for Web Programming and here is everything used:</p>
+            <ul>
+                <li>Postgres database, instead of local H2 database. This is due to login/register form. There is a functionality for registering new users to the database. H2 databases are not good for persisting data across application restarts. Postgres is configured using PgAdmin4.</li>
+                <li>Login/register form that registers new users via the User model and lets the same registered users sign in via the login form. The user is stored and populated via Postgres.</li>
+                <li>Exercise model which is populated via the DataInitializer in the config package. The exercises are populated locally and displayed dynamically in the HTML.</li>
+                <li>BMI Calculator, a separate functionality that lets the user see his/her Body Mass Index. When the index is shown, the user is automatically placed in a weight category. There is also a picture shown so that the user has a general idea of how their weight is impacting their health.</li>
+            </ul>
+        </div>
+    </div>
+</main>
+</body>
+</html>

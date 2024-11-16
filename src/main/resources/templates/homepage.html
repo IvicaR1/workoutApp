@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 1rem;
+        }
+
+        .tekst {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-left: 2rem;
+        }
+
+        li {
+            margin-left: 2rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main .tekst {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80vh;
+        }
+
+        .naslov h2 {
+            font-size: 3rem;
+            margin-top: 0;
+        }
+
+        .naslov p {
+            font-size: 1.2rem;
+        }
+
+        .naslov {
+            width: 40%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Adjusted alignment */
+        }
+
+        .naslov .kopce {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
+
+        .naslov .kopce:hover {
+            background-color: darkred;
+        }
+
+        nav ul li a:hover {
+            color: darkred;
+        }
+
+        .slika {
+            width: 60%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .slika img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="tekst">
+        <h1>Workout App</h1>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="tekst">
+        <section class="naslov">
+            <h2>Achieve Your Fitness Goals</h2>
+            <p>Your personal fitness companion. Track your workouts, monitor your progress, and stay motivated!</p>
+            <a href="/login" class="kopce">Get Started</a>
+        </section>
+        <div class="slika">
+            <img src="/png.monster-948.png" alt="Logo">
+        </div>
+    </div>
+</main>
+</body>
+</html>

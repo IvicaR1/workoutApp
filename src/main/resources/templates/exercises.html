@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: darkred;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .card p {
+            font-size: 1rem;
+            padding: 0 1rem 1rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .card a:visited {
+            color: black;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <div class="logo">WorkoutApp</div>
+        <nav>
+            <ul>
+                <li><a href="/bmicalculator">BMI Calculator</a></li>
+                <li><a href="/exercises">Exercises</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="cards-container">
+        <div class="card">
+            <a href="/exercises/category?category=weightloss">
+                <img src="/weightloss.jpg" alt="Weight Loss Exercises">
+                <h3>Exercises for Weight Loss</h3>
+                <p>Discover exercises designed to help you shed those extra pounds.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/exercises/category?category=musclegain">
+                <img src="/musclegain.jpg" alt="Muscle Gain Exercises">
+                <h3>Exercises for Muscle Gain</h3>
+                <p>Build and strengthen your muscles with these effective exercises.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/exercises/category?category=bodyposture">
+                <img src="/bodyposture.png" alt="Body Posture Exercises">
+                <h3>Exercises for Body Posture</h3>
+                <p>Improve your body posture with targeted exercises.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="/exercises/category?category=health">
+                <img src="/healthy.jpg" alt="Health Exercises">
+                <h3>Exercises for Health</h3>
+                <p>Maintain overall health with these beneficial exercises.</p>
+            </a>
+        </div>
+    </div>
+</main>
+</body>
+</html>
