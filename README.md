@@ -2,11 +2,11 @@ Workout App
 
 This is a Workout Application built using Spring Boot for the backend, html/css for the frontend and PostgressDB for the database. The application helps users manage their fitness routines, calculate BMI and view our healthy weight category.
 
-Features
-User Management: Registration, and login.
-BMI Calculator: Calculate and display BMI based on user input and view weight category.
-Exercise Library: Browse exercises with descriptions, video tutorials, and categories.
-Responsive and Simple Frontend: Built with html/css for a seamless user experience.
+Features <br>
+User Management: Registration, and login. <br>
+BMI Calculator: Calculate and display BMI based on user input and view weight category. <br>
+Exercise Library: Browse exercises with descriptions, video tutorials, and categories. <br>
+Responsive and Simple Frontend: Built with html/css for a seamless user experience. <br>
 
 ![Login Form with password encryption](https://github.com/user-attachments/assets/0de6ba0d-8247-4d1f-a698-bee93c3be455)
 ![Register Form with password encryption](https://github.com/user-attachments/assets/b37d103f-630c-4c08-8d50-e615c5d25da3)
